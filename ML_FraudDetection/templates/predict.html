@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Fraud Detection</title>
+    <style>
+        body {
+            background-image: url({{url_for('static',filename='5153829.jpg')}});
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: rgb(0, 219, 248);
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .options {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .option-box {
+            display: inline-block;
+            background-color: #d3d3d3;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .option-box a {
+            text-decoration: none;
+            color: black;
+        }
+        #name{
+            color: "#0a2a4f";
+        }
+    </style>
+</head>
+<body>
+    <div class="options">
+        <div class="option-box"><a href="/home">Home</a></div>
+        <div class="option-box"><a href="/predict">Predict</a></div>
+        <div class="option-box"><a href="/aboutUs">About Us</a></div>
+    </div>
+    <div class="container">
+        <h1 id="name" style="color:#0a2a4f;">ML Fraud Prediction</h1>
+        <form action="/pred" method="POST">
+            <label for="step">Step:</label>
+            <input type="number" name="step" min="1" max="100" placeholder="Represents a unit of time where 1 step equals 1 hour" required>
+            
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount"  placeholder="the amount of the transaction" required>
+            
+            <label for="oldbalanceOrg">Original Source Balance:</label>
+            <input type="number" name="oldbalanceOrg" placeholder="balance before the transaction" required>
+            
+            <label for="newbalanceOrig">New Source Balance:</label>
+            <input type="number" name="newbalanceOrig" placeholder="balance after the transaction" required>
+            
+            <label for="oldbalanceDest">Original Recepient Balance:</label>
+            <input type="number" name="oldbalanceDest" placeholder="initial balance of recipent before the transaction" required>
+            
+            <label for="newbalanceDest">New Recepient Balance:</label>
+            <input type="number" name="newbalanceDest" placeholder="the new balance of recipent after the transaction" required>
+        
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

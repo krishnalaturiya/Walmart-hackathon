@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>ML Fraud Detection</title>
+  <style>
+    body{
+        background-image: url({{url_for('static',filename='5153829.jpg')}});
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .card{
+        width: 600px;
+        height: 500px;
+        margin-left: 500px;
+        margin-top: 80px;    
+        border-radius: 35px;  
+        border-radius: 30px;  
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card h3{
+        padding-top: 30px;
+        text-align: center;
+        font-size: 40px;
+        font-family:'Times New Roman', Times, serif;
+        padding-bottom: 10px;
+        color: #0a2a4f;
+    }
+
+    .card p{
+        padding-left: 40px;
+        padding-right: 40px;
+        color: #0a2a4f;
+        font-size: 18px;
+    }
+    .options {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+  
+      .option-box {
+        display: inline-block;
+        background-color: #d3d3d3;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+      }
+</style>
+</head>
+<body>
+    
+    <div class="card">
+      <h3>About Us</h3>
+      <p>Our vision is rooted in a commitment to safeguard individuals and businesses from the pervasive threat of fraudulent activities that undermine the integrity of online transactions. As digital transactions continue to proliferate, the potential for malicious actors to exploit vulnerabilities within the system has grown exponentially. This underscores the vital importance of creating a robust defense mechanism that not only identifies and prevents fraudulent transactions but also establishes an atmosphere of trust and confidence in the digital payment ecosystem.
+      </p>
+    </div>
+
+    <div class="options">
+        <div class="option-box" ><a href="/">Home</a></div>
+        <div class="option-box"> <a href="/predict">Predict</a></div>
+        <div class="option-box"><a href="/aboutUs">About Us</a></div>
+    </div>
+</body>
+</html>
